@@ -365,6 +365,7 @@ def get_epub_metadata(filepath, read_cover_image=True, read_toc=True):
     file_size_in_bytes = os.path.getsize(filepath)
 
     data = odict({
+        'opf_filepath': opf_filepath,
         'epub_version': _discover_epub_version(opf_xmldoc),
         'title': _discover_title(opf_xmldoc),
         'language': _discover_language(opf_xmldoc),
