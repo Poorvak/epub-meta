@@ -210,7 +210,7 @@ def _discover_cover_image(zf, opf_xmldoc, opf_filepath):
     return content, extension
 
 
-def _discover_(zf, opf_xmldoc, opf_filepath):
+def _discover_toc(zf, opf_xmldoc, opf_filepath):
     '''
     Returns a list of objects: {title: str, src: str, level: int, index: int}
     '''
