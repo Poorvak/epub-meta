@@ -210,7 +210,8 @@ def _discover_cover_image(zf, opf_xmldoc, opf_filepath):
     return content, extension
 
 
-def _discover_toc(zf, opf_xmldoc, opf_filepath):
+def _discover_
+(zf, opf_xmldoc, opf_filepath):
     '''
     Returns a list of objects: {title: str, src: str, level: int, index: int}
     '''
@@ -260,6 +261,8 @@ def _discover_toc(zf, opf_xmldoc, opf_filepath):
         tag = find_tag(opf_xmldoc, 'item', 'id', 'ncx')
         if not tag:
             tag = find_tag(opf_xmldoc, 'item', 'id', 'ncxtoc')
+        if not tag:
+            tag = find_tag(opf_xmldoc, 'item', 'id', 'toc_ncx')
         if tag and 'href' in tag.attributes.keys():
             filepath = tag.attributes['href'].value
             # The ncx file path is relative to the OPF file
